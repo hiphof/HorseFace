@@ -15,15 +15,15 @@ python -m venv venv_horseface
 Make sure your terminal is in the root directory and run the following command to activate the virtual environment: <br> <br>
 In command prompt:
 ```bash
-venv\Scripts\activate.bat
+venv_horseface\Scripts\activate.bat
 ```
 In PowerShell (Might not work because of a security error):
 ```bash
-venv\Scripts\Activate.ps1
+venv_horseface\Scripts\Activate.ps1
 ```
 For Linux/MacOS:
 ```bash
-source venv/bin/activate
+source venv_horseface/bin/activate
 ```
 
 If you have just installed the venv, please check the python version again. It should return the same version when you are in the venv.
