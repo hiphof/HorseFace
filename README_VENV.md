@@ -8,7 +8,7 @@ python -V
 
 To create a venv make sure you are in the root directory and run the following command (only do this once): <br>
 ```bash
-python -m venv venv
+python -m venv venv_horseface
 ```
 
 ### Activate venv
