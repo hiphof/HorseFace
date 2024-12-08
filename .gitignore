@@ -165,7 +165,8 @@ cython_debug/
 .idea/
 
 # Data
-/data/*
+/data/saved_models/*
+/data/THoDBRL2015/*
 !/data/.gitkeep
 
 # MacOS
