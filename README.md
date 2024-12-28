@@ -28,3 +28,6 @@ Content of data folder is ignored in .gitignore
 * Inside these folders:
     * Videos (e.g., 1V1.AVI, 1V2.AVI).
     * An images folder, which  contains stills.
+
+## Dependencies
+Keras 3 will be the default Keras version for TensorFlow 2.16 onwards. You may need to update your script to use Keras 3.
