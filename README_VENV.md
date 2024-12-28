@@ -44,3 +44,8 @@ After installing new module(s) you will need to update the requirements file to 
 ```bash
 pip freeze > requirements.txt
 ```
+
+### Delete all dependencies
+Possibilities:
+* delete the VENV and create a new VENV
+* ```pip freeze | xargs pip uninstall -y```
