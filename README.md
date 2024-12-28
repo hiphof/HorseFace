@@ -31,3 +31,13 @@ Content of data folder is ignored in .gitignore
 
 ## Dependencies
 Keras 3 will be the default Keras version for TensorFlow 2.16 onwards. You may need to update your script to use Keras 3.
+
+Not available in PyPy: ```pip install tensorflow==2.15.1```
+
+To continue using Keras 2 with TensorFlow 2.16+ check https://blog.tensorflow.org/2024/03/whats-new-in-tensorflow-216.html
+
+Keras 3.0 released on Nov 28, 2023
+
+Tensorflow 2.16 is released on March 13, 2024
+
+It looks like `tf-explain` is not compatible with `keras 3`
