@@ -77,8 +77,14 @@ Also on horse shows, it would be more beautiful to have horses without RFID tags
 - Error analysis and insights.
 
 ### 3.7 Technologies and Tools Used
-- Frameworks: TensorFlow with Keras
-- Libraries: Grad-CAM, OpenCV, NumPy, Matplotlib
+- Frameworks: TensorFlow (::latest). 
+- Libraries 
+  - General: OpenCV, NumPy, pandas, Matplotlib
+  - Keras: tf-keras for Keras 2.
+  - CAM (Class Activation Mapping):
+    - sicara/tf-explain: for TF, not working with Keras 3, and not working with `custom model`
+    - jacobgil/pytorch-grad-cam: for Pytorch, most Github stars
+    - frgfm/torch-cam: for Pytorch
 - Hardware: laptop (Macbook Air M1, and two Windows laptops). No dedicated NVIDIA GPU.
 
 ---
@@ -87,6 +93,9 @@ Also on horse shows, it would be more beautiful to have horses without RFID tags
 
 ### 4.1 Results
 - Tabular and graphical representation of performance metrics.
+
+![Confusion Matrix](/data/confusion_matrix.png)
+
 - Confusion matrix, ROC curves, etc.
 
 ### 4.2 Discussion
