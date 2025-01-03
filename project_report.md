@@ -1,9 +1,8 @@
 # Horse Face Recognition
 
 ## Abstract
-- Brief overview of the project.
-- Key objectives, methods, and outcomes.
-- Summary of results and conclusions.
+- In this study horses are classified based on the face, to make RFID scanner obsolete.
+- The objective is to identify horses from our client Voskamp. This is done with a pre-trained Resnet CNN. The outcome is an accuracy of 62%. Based on CAM heatmaps it looks like the background is mostly responsible for the prediction.
 
 ---
 
@@ -60,6 +59,7 @@ Also on horse shows, it would be more beautiful to have horses without RFID tags
 - No Data augmentation techniques, such as flipping or rotation are used.
 - Data splitting strategy: 64% training, 16% validation, 20% test. Stratified.
 - Focused the get the models working on the first part (10 horses).
+- To speed up modelling, only 20% of stills are used.
 
 ### 3.5 Modeling
 - Used both Custom model (~ 8 layers) and ResNet model.
@@ -69,7 +69,9 @@ Also on horse shows, it would be more beautiful to have horses without RFID tags
   - Optimizer: using an Adam (Adaptive Moment Estimation) optimizer
   - Learning rate: Default learning rate of 0.001  (e.g., optimizer, learning rate, loss function).
   - Loss-function: Categorical crossentropy (ideal for multi-class classifiction)
-- Hyperparameter tuning: tried batch-size 32 up until 128
+- Hyperparameter tuning:
+  - tried batch-size 32 up until 128
+  - Used pre-trained model 'ImageNet'
 
 ### 3.6 Evaluation
 - Metrics used to evaluate performance: accuracy, precision.
@@ -92,34 +94,30 @@ Also on horse shows, it would be more beautiful to have horses without RFID tags
 ## 4. Results and Discussion
 
 ### 4.1 Results
-- Tabular and graphical representation of performance metrics.
-
+- Training Accuracy: 0.9633
+- Validation Accuracy: 0.6114
+- Test accuracy: **0.6193**
+![Model accuracy](/scripts/results/model_accuracy.png)
 ![Confusion Matrix](/data/confusion_matrix.png)
-
-- Confusion matrix, ROC curves, etc.
+![Grad-CAM](/scripts/results/grad_cam_2500.png)
 
 ### 4.2 Discussion
 - Analysis of results.
+  - The setting (background) contains the most changing pixels as seen in heatmaps.
+  - Overfitting, because validation accuracy is higher than training accuracy
 - Strengths and weaknesses of the model.
-- Comparisons to baseline or other existing models.
-- Impact of data quality and preprocessing on results.
+  - Only uses 20% of available images
+- Did not compare with small custom model, due to problems with CAM (Activation Map).
 
 ---
 
-## 5. Deployment
-
-Deployment is not implemented. Only testing on premise, on laptops.
-
----
-
-## 6. Conclusion
-- Summary of the project's accomplishments.
-- Key findings and their implications.
-- Limitations of the current approach.
+## 5. Conclusion
+- Our model could predict 62% of the horses, while using data of 10 horses.
+- Limitations: It looks like above results are more based on the background than on the horses itself.
 
 ---
 
-## 7. Recommendations and Future Work
+## 6. Recommendations and Future Work
 - Data collection: find a dataset with horses with diverse backgrounds.
 - Dataset augmentation:
   - Try removing the background of the horses
@@ -128,17 +126,14 @@ Deployment is not implemented. Only testing on premise, on laptops.
 - Use all 47 horses instead of only the first 10.
 - Test models like PetFace and ArcFace.
 - Use better hardware (GPU)
+- Investigate further based on the correlation matrix. Find out why some horses have better accuracy than others.
 - Use pre-trained ResNet model
 - Use metrics like recall and F1.
+- Check ROC curve with OvR or OvO
 
 ---
 
-## 8. References
+## 7. References
 - Dataset used: (https://ieee-dataport.org/open-access/thdd)
 
 ---
-
-## 9. Appendices *(if needed)*
-- Additional figures, charts, or tables.
-- Details of the codebase or scripts used.
-- Extended results (e.g., performance on subgroups).
