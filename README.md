@@ -1,7 +1,11 @@
 ## HorseFace
-
 Horse face recognition. DASC2 course at Fontys.
 
+[**> Project Report**](project_report.md)
+
+[**> Final notebook**](/scripts/only_stills_heatmap.ipynb)
+
+## Venv
 To have the same environment [make sure your Virtual Environment (Venv) is active](README_VENV.md).
 
 ## Data
@@ -16,7 +20,7 @@ Content of data folder is ignored in .gitignore
     /data/THoDBRL2015/
 
 
-## Databse Organisation
+## Database Organisation
 
 * Main Parts: The data is split into Part1, Part2, ..., Part5.
 

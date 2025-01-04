@@ -1,5 +1,6 @@
 # Horse Face Recognition
 [https://github.com/hiphof/HorseFace/](https://github.com/hiphof/HorseFace/)
+> [> final notebook](https://github.com/hiphof/HorseFace/blob/main/scripts/only_stills_heatmap.ipynb)
 
 ## Abstract
 - In this study horses are classified based on the face, to make RFID scanner obsolete.
