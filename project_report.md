@@ -1,8 +1,9 @@
 # Horse Face Recognition
+[https://github.com/hiphof/HorseFace/](https://github.com/hiphof/HorseFace/)
 
 ## Abstract
 - In this study horses are classified based on the face, to make RFID scanner obsolete.
-- The objective is to identify horses from our client Voskamp. This is done with a pre-trained Resnet CNN. The outcome is an accuracy of 62%. Based on CAM heatmaps it looks like the background is mostly responsible for the prediction.
+- The objective is to identify horses from our client Rosmark Consultancy. This is done with a pre-trained Resnet CNN. The outcome is an accuracy of 62%. Based on CAM heatmaps it looks like the background is mostly responsible for the prediction.
 
 ---
 
@@ -40,7 +41,7 @@ on the neck of the horses. Some signals of RFID are not healthy for the horse, a
 not convenient for the horse to have a RFID on their neck.
 Also on horse shows, it would be more beautiful to have horses without RFID tags.
 
-- Client: GreenTechlab (Anton Winkelmolen) and John Voskamp (owner of EquiMoves).
+- Client: GreenTechlab and Rosmark Consultancy.
 
 - After exploring the unlabeled data from our client, decided is to focus on publicly available labeled dataset.
 
